@@ -32,24 +32,6 @@ textarea {
   border: 1px solid gray;
 }
 
-button {
-  display: block;
-  margin: 20px auto;
-  width: 150px;
-  height: 50px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #3e8e41;
-}
-
 #output {
   border: 1px solid black;
   overflow-y: scroll;
