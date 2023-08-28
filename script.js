@@ -3,8 +3,7 @@ function minifySVGPaths() {
   const output = document.getElementById('output');
   let minifiedHTML = input.value;
 
-  const svgRegex =
-    /<svg.*?>[\s\S]*?<\/svg>|<!-- svg path(s) excluded for brevity -->/gi;
+  const svgRegex = /<svg[\s\S]*?<\/svg>/gi;
   const svgs = input.value.match(svgRegex);
 
   if (svgs) {
@@ -14,9 +13,6 @@ function minifySVGPaths() {
           svg,
           '<!-- svg path(s) excluded for brevity -->'
         );
-      } else {
-        const pathComment = '<!-- svg path(s) excluded for brevity -->';
-        minifiedHTML = minifiedHTML.replace(svg, pathComment);
       }
     });
   }
